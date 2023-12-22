@@ -1,0 +1,187 @@
+{% extends 'acceuil.html' %}
+{% block title %}Page Accueil {% endblock %}
+{% block content%}
+<body background="/static/image_acceuill/01.jpg" id="image">
+<div class="container mt-3 mb-5">
+        <div class="jumbotron mt-5">
+            <center>
+          <h1 class="display-4"><I>Bienvenue sur kaufen</I></h1>
+          <p style="color:white" class="lead" >Nous mettons à votre disposition un large choix de produits.</p>
+          <hr class="my-4">
+          <p style="color:white"> Vous voulez découvrir maintenant nos produits!!</p>
+            <p class="lead">
+  <a class="btn btn-primary" href="{% url 'listProduit' %}" role="button">Voir tout nos produits</a>
+</p>
+
+            </center>
+        </div>
+    </div>
+  <footer class="footer">
+     <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a><br>
+                    <a href="#"><i class="fa fa-phone"></i></a><span class="icon icon-phone"></span><span class="text" style="color: white;">+212 697 647 635</span></a>
+                </div>
+            </div>
+        </div>
+           <div class="row">
+            <div  class="col-mt-5 text-center">
+
+              <p style="color: white;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script>by ayoub tabourit & reda chahid <i class="icon-heart color-danger" aria-hidden="true"></i>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+     </div>
+    </footer>
+<script text="text/javascript">
+
+let image = document.getElementById('image');
+
+let images = ['/static/image_acceuill/01.jpg','/static/image_acceuill/02.jpg','/static/image_acceuill/03.jpg']
+
+setInterval(function(){
+
+    let random = Math.floor(Math.random() * 3);
+
+    image.background=images[random];
+
+},2900);
+
+</script>
+</body>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+
+	font-family: 'Poppins', sans-serif;
+	background-size:cover;
+}
+header{text-align: center;
+    padding-top: 100px;
+    margin-bottom: 300px;
+    font-size: 35px;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 100px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+</style>
+{% endblock %}

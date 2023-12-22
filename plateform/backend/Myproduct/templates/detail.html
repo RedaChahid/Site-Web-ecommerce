@@ -1,0 +1,27 @@
+{% extends 'acceuil.html' %}
+{% block title %} Detail du produit {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-dark mt-5">
+                <h2>Details du produit</h2>
+                <div class="row">
+                    <dd class="col-md-4"></dd>
+                    <dd class="col-md-9"><img src="/static/images/{{ produit.image }}" width="500" height="300"><br></dd>
+                    <dd class="col-md-4">Nom:</dd>
+                    <dd class="col-md-8"><h5>{{produit.name}}</h5></dd>
+                    <dd class="col-md-4">Catégorie:</dd>
+                    <dd class="col-md-8"><h5>{{produit.category}}</h5></dd>
+                    <dd class="col-md-4">Prix:</dd>
+                    <dd class="col-md-8"><h5>{{produit.price}}</h5></dd>
+                    <dd class="col-md-4">Quantité en stock:</dd>
+                    <dd class="col-md-8"><h5>{{produit.countInStock}}</h5></dd>
+                    <dd class="col-md-4">description:</dd>
+                    <dd class="col-md-8"><h5>{{produit.description}}</h5></dd>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
