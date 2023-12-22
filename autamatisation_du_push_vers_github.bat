@@ -11,7 +11,7 @@ git commit -m "Premier commit"
 
 REM Remplacez ces valeurs par vos informations GitHub
 set USERNAME=RedaChahid
-set REPO=Site Web ecommerce
+set REPO=Site-Web-ecommerce
 
 echo Ajout du repository distant...
 git remote add origin https://github.com/%USERNAME%/%REPO%.git
